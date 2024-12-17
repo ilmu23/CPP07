@@ -68,6 +68,20 @@ int	main(void)
 			std::cout << e.what() << "\n";
 		}
 
+		Array<int>		f(a);
+		try {
+			for (i = 0;; i++)
+				std::cout << "a[" << i << "]: " << a[i] << "\n";
+		} catch (std::exception &e) {
+			std::cout << e.what() << "\n";
+		}
+		try {
+			for (i = 0;; i++)
+				std::cout << "f[" << i << "]: " << f[i] << "\n";
+		} catch (std::exception &e) {
+			std::cout << e.what() << "\n";
+		}
+
 		return 0;
 	} catch (std::exception &e) {
 		std::cout << "arr: " << e.what() << "\n";

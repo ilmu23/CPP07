@@ -11,7 +11,7 @@ template <typename T> Array<T>::Array(void): _arr(nullptr), _size(0) {}
 
 template <typename T> Array<T>::Array(const size_t &size): _arr(new T[size]), _size(size) {}
 
-template <typename T> Array<T>::Array(const Array<T> &copy)
+template <typename T> Array<T>::Array(const Array<T> &copy): Array()
 {
 	*this = copy;
 }
